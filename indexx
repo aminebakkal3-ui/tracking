@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Tracking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Phone Tracking System</h1>
+            <p class="subtitle">Real-time device location tracking</p>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <div class="input-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input 
+                        type="text" 
+                        id="phoneNumber" 
+                        placeholder="Enter phone number (e.g., +1234567890)"
+                    >
+                </div>
+                <button id="trackBtn" class="btn-track">Track Device</button>
+            </section>
+
+            <section class="map-container">
+                <div id="map"></div>
+            </section>
+
+            <section class="info-panel">
+                <h2>Device Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Location</h3>
+                        <p id="location">Not tracked yet</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Coordinates</h3>
+                        <p id="coordinates">Lat: --, Lng: --</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Accuracy</h3>
+                        <p id="accuracy">-- meters</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Last Updated</h3>
+                        <p id="lastUpdated">--</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Device Status</h3>
+                        <p id="status">Offline</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Battery Level</h3>
+                        <p id="battery">-- %</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history-panel">
+                <h2>Tracking History</h2>
+                <div class="history-controls">
+                    <button id="clearHistoryBtn" class="btn-secondary">Clear History</button>
+                </div>
+                <div id="historyList" class="history-list">
+                    <p class="empty-state">No tracking history yet</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Phone Tracking System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Leaflet Map Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
